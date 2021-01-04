@@ -4,7 +4,7 @@ maze_iterator::maze_iterator(coord x_beg, coord x_end, coord y_beg, coord y_end,
 	box_iterator{ x_beg, x_end, y_beg, y_end },
 	maze_{ m }
 {
-	if (x_beg_ >= std::sqrt(maze_.get_storage().size()) || y_beg_ >= std::sqrt(maze_.get_storage().size()))
+	if (x_beg_ > maze_.max_coord() || y_beg_ > maze_.max_coord())
 	{
 		throw "No intersection between box and maze";
 	}
