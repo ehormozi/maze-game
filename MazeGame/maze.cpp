@@ -100,3 +100,16 @@ void maze::reveal(const point2d& point)
 {
 	(*(operator()(point).get())).reveal();
 }
+
+void maze::print()
+{
+	for (size_t i = 0; i <= max_coord(); i++)
+	{
+		for (size_t j = 0; j <= max_coord(); j++)
+		{
+			auto p = point2d{i, j};
+			std::cout << (*(operator(p).get())).to_char() << std::endl;
+		}
+		std::cout << std::endl;
+	}
+}
