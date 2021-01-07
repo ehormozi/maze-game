@@ -170,6 +170,8 @@ class maze : public storage<field_ptr>
 	field_effect evaluate_effects(const point2d& p) const;
 
 	void reveal(const point2d& point);
+	
+	void print();
 };
 
 class box_iterator
