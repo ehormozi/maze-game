@@ -40,14 +40,7 @@ coord storage<T>::max_coord() const
 template <typename T>
 bool storage<T>::has_point(const point2d& p) const
 {
-	for (unsigned i = 0; i < n_; i++)
-	{
-		if (elements_[i] == p)
-		{
-			return true;
-		}
-	}
-	return false;
+	return p.x <= max_coord() && p.y <= max_coord();
 }
 
 template <typename T>
