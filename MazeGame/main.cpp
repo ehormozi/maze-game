@@ -47,7 +47,38 @@ int main()
 {
 	auto maze_str = std::string("");
 	srand((int)time(0));
-	std::cout << (rand() % 10) + 1 << std::endl;
-	auto m = maze("");
+    for (size_t i = 0; i < 25; i++)
+    {
+        int r = (rand() % 20) + 1;
+        if (r == 1)
+        {
+            maze_str.push_back('I');
+        }
+        else if (r == 2)
+        {
+            maze_str.push_back('O');
+        }
+        else if (r >= 3 && r <= 6)
+        {
+            maze_str.push_back('w');
+        }
+        else if (r >= 7 && r <= 14)
+        {
+            maze_str.push_back(' ');
+        }
+        else if (r == 15 || r == 16)
+        {
+            maze_str.push_back('t');
+        }
+        else if (r == 17 || r == 18)
+        {
+            maze_str.push_back('T');
+        }
+        else if (r == 19 || r == 20)
+        {
+            maze_str.push_back('H');
+        }
+    }
+	auto m = maze(maze_str);
 	return 0;
 }
