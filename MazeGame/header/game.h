@@ -20,6 +20,7 @@ public:
 	game(maze *m, player *p);
 	bool is_won() const;
 	void print();
+	void print_guide() const;
 
 private:
 

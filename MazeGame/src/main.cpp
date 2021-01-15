@@ -6,6 +6,7 @@ int main()
 	auto p = player{m, m.getCoordEntrance()};
 	auto g = game{&m, &p};
 	p.observe();
+	g.print_guide();
 	g.print();
 	while (!g.is_won() && !p.is_dead())
 	{
