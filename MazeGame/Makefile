@@ -64,5 +64,5 @@ tmp/wall.o : src/wall.cpp
 	g++ -Wall -c src/wall.cpp -o tmp/wall.o
 
 clear:
-	rm tmp/*
+	rm tmp/*.o
 	rm MazeGame
