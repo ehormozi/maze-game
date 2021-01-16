@@ -9,6 +9,7 @@ bool game::is_won() const
 
 void game::print()
 {
+	std::cout << "z: up, s: down, q: left, d: right" << std::endl;
 	auto hp = player_->hp_ >= 0 ? player_->hp_ : 0;
 	std::cout << "HP: " << hp << std::endl;
 	std::cout << std::endl;
